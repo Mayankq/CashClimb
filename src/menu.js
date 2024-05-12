@@ -1,12 +1,18 @@
 import './App.css'
-
+import { Link } from 'react-router-dom';
 
 function Menu(){
     return(
         <div className="menubar">
-            <div  className="menuItems"><p> Home</p></div>
-            <div  className="menuItems"><p> Account Settings</p></div>
-            <div  className="menuItems"><p> Loan Application</p></div>
+            <Link to="/Dashboard">
+                <button className="menuItems"><p> Home</p></button>
+            </Link>
+            <Link to="/accountset">
+                <button className="menuItems"><p> Account Settings</p></button>
+            </Link>
+            <Link to="/loanapp">
+                <button className="menuItems"><p> Loan Application</p></button>
+            </Link>
         </div>
     );
 }

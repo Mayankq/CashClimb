@@ -1,17 +1,15 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation hook
 import logoImage from './assets/Logo.png';
 import avatar from './assets/avatar.png';
 
-const Navbar = () => {
-  const [user, setUser] = useState(null);
-
+const Navbar = ({ user, onLogout, currentPage }) => { // Add currentPage prop
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       try {
-        setUser(JSON.parse(storedUser));
+        // setUser(JSON.parse(storedUser)); // This line is unnecessary and can be removed
       } catch (error) {
         // Handle parsing error
         console.error('Error parsing user data:', error);
@@ -22,9 +20,13 @@ const Navbar = () => {
   const handleLogout = () => {
     // Clear user data from local storage
     localStorage.removeItem('user');
-    // Set user state to null
-    setUser(null);
+    // Call onLogout prop
+    onLogout();
   };
+
+  // Get the current pathname using useLocation hook
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
     <nav className="navbar">
@@ -37,13 +39,18 @@ const Navbar = () => {
       <div className="right-items">
         <img src={avatar} alt="avatar" className="avatar" />
         {user ? (
-          <>
-            <div className="user-info">{user.Name}</div> {/* Accessing user's Name property */}
-            <button className="logout" onClick={handleLogout}>Logout</button>
-          </>
-        ) : (
-          <Link className="login" to="/login">Login/SignUp</Link>
-        )}
+  <>
+    <div className="user-info">{user.name}</div>
+    <button className="logout" onClick={handleLogout}>Logout</button>
+  </>
+) : (
+  currentPage !== '/login' && (
+    <div style={{ display: 'flex' }}>
+      <Link style={{ marginRight: '10px' }} className="login" to="/login">Login</Link>
+      <Link className="login" to="/signup">Signup</Link>
+    </div>
+  )
+)}
         <button className='Connect'></button>
       </div>
     </nav>

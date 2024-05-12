@@ -1,11 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import coinimg from "./assets/side.jpg";
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { Link, useLocation, useNavigate } from 'react-router-dom'; 
 
 function Login() {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleSignup = (newUserData) => {
+    // Process the new user data here (e.g., add to users state)
+    console.log('New user signed up:', newUserData);
+}
+
+  const [users, setUsers] = useState([
+    {
+      aadharNumber: '123456789012',
+      password: 'password123',
+      name: 'John Doe',
+      investmentAmount: 5000,
+      category: 'Stocks'
+    },
+    {
+      aadharNumber: '987654321098',
+      password: 'abc123',
+      name: 'Jane Smith',
+      investmentAmount: 8000,
+      category: 'Bonds'
+    }
+  ]);
+
+  useEffect(() => {
+    if (location.state && location.state.newUser) {
+      const newUser = location.state.newUser;
+      setUsers(prevUsers => [...prevUsers, newUser]);
+    }
+  }, [location.state]);
 
   const [formData, setFormData] = useState({
     aadharNumber: '',
@@ -19,22 +47,22 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/login', formData);
-      if (response.data.success) {
-        console.log(response.data.user);
-        // Store user data in local storage
-        localStorage.setItem('user', JSON.stringify(response.data.user));
-        navigate('/dashboard'); // Redirect to /dashboard upon successful login
+      const user = users.find(user => user.aadharNumber === formData.aadharNumber);
+      if (user && user.password === formData.password) {
+        console.log('Login successful');
+        localStorage.setItem('user', JSON.stringify(user));
+        navigate('/dashboard');
+      } else {
+        console.error('Invalid Aadhar number or password');
       }
     } catch (error) {
-      console.error('Login failed:', error.response.data.message);
+      console.error('Login failed:', error);
     }
   };
 
   return (
     <div className="log">
       <div className="row">
-        <div className='col1'></div>
         <div className='col2'>
           <main className="App-main">
             <section className="login-section">
@@ -60,19 +88,18 @@ function Login() {
                     required 
                   />
                   <br></br>
-                  <h6> <u>Forgot password? Try another way</u></h6>
                   <br></br>
                 </div>
                 <button type="submit" className="login-btn">Log In</button>
               </form>
               <br></br>
               <hr></hr>
-              <p className="signup-message"><u>Do not have an account? Sign Up</u></p>
+              <Link className="signup-message" to="/signup"><u>Do not have an account? Sign Up</u></Link>
             </section>
           </main>
         </div>
-        <div className='imagee'>
-          <img src={coinimg} alt="Your Image" />
+        <div className='image'>
+          <img src={coinimg} className='coin'/>
         </div>
       </div>
     </div>

@@ -1,20 +1,3 @@
-
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .login{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -123,14 +106,68 @@
   color: white;
 }
 
-.log{
+.row{
   display: flex;
 }
-
-.imagee{
-  height:507px;
-  width:400px;
+.col2{
+  margin-left: 30px;
+  text-align: center;
+  font-family: "Gudea",sans-serif;
+  width: 50%;
+  background-color: white;
+  border-radius: 0px;
+  padding-left: 20px;
+  padding-right: 40px;
+  padding-top:296px;
+  padding-bottom :30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.login-section {
+  font-family: "Gudea", sans-serif;
+  text-align: center;
+  height: 100%;
+
+}
+.login-section h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display:block;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+.forgot-password {
+  font-size: 12px;
+  margin-bottom: 20px;
+  color:#ccc
+}
+.login-btn{
+  width:120px;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.image {
+  height:100%;
+  width: 50%;
+   }
+   .image img{
+     width: 100%;
+     height: 60%;
+   }
 
 .menubar {
   display: flex;
@@ -143,15 +180,21 @@
   padding-top: 30px;
 }
 
+.flexing{
+  display: flex;
+}
+
 .menuItems {
   display: flex; /* Added */
   background-color: white;
   border-radius: 20px;
-  width: 85%;
+  border: none;
+  width: 400px;
   height: 40px;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .dash{
@@ -164,21 +207,86 @@
   width: 300px;
   margin-top: 20px;
   margin-left: 40px;
+  border-radius: 60px;
+  padding: 10px 10px 10px 10px;
 }
 
 .dash2{
   display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.account-settings {
+  width: 100%; /* This will make sure it takes the full width of its parent */
+  background-color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 40px;
+  padding-top: 10px;
+  margin-top: 0px;
+  box-sizing: border-box; /* This ensures padding does not affect the total width */
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr {
+  width: 60%;
+  text-align: left;
+  margin-left: 0;
+}
+
+.dpImage{
+  border-radius: 50%;
+}
+.button{
+  background-color: transparent;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.myform{
+  display:flex;
+  font-family: 'Gudea', sans-serif;
+}
+
+.align1{
+  display: flex;
+  gap:80px;
+  margin-left: 80px;
+  width: 500px;
+  height: 50px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+
+}
+.align2{
+  display: flex;
+  gap:80px;
+  margin-left: 80px;
+  width: 500px;
+  height: 50px;
+  border-radius: 30px; 
+  margin-bottom: 20px; 
+}
+.align3{
+  margin-left: 80px;
+  width: 1000px;
+  height: 150px;
+}
+.spaced-text{
+  line-height:10;
+}
+.curved-radius{
+  border-radius: 30px;
+}
+.myform{
+  margin-left: 80px;
+}
+.sub{
+  width: 200px;
+  height: 40px;
+}
+.curved-radius::placeholder{
+  text-align: center;
+  font-family: 'Gudea', sans-serif;
+}
+.align4{
+  text-align: center;
+  font-family: 'Gudea', sans-serif;
 }

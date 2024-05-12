@@ -35,7 +35,7 @@ const options = {
   },
 };
 
-function Dashboard(){
+function Dashboard({user}){
     return(
         <div>
             <div className='dash'>
