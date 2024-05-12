@@ -1,0 +1,184 @@
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.login{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1D2B2C;
+  color: #fff;
+  padding: 20px;
+  padding-left:40px;
+}
+
+.logo-image {
+  height: 80px;
+  width: 80px;
+}
+
+.left-items {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-title {
+  margin-left: 20px;
+  font-size: 30px;
+  font-family: "Grey Qo", cursive;
+}
+
+.hed{
+  text-align: right;
+  font-family: "Gudea", sans-serif;
+  font-size: 3em;
+  margin-right:40px;
+  margin-left: auto;
+  margin-bottom: 0;
+}
+
+.testimonials{
+  display: flex;
+}
+
+.testi{
+  background-color: white;
+  height: 280px;
+  margin-top:20px;
+  width:250px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 50px;
+  box-shadow: 5px 5px #BFBFBF;
+  font-size: 0.9em;
+}
+
+.Connect {
+  border: 2px solid #fff;
+  background-image: url('./assets/contact.png');
+  color: #fff;
+  padding: 0;
+  height: 47px;
+  width: 278px;
+  border-radius: 30px;
+  scale: 0.7;
+  cursor: pointer;
+  margin-right: 0;
+}
+
+.right-items{
+  display: flex;
+  align-items: center;
+}
+
+.actual{
+  display: flex;
+}
+
+.avatar{
+  height:30px;
+  width:30px;
+}
+
+.idk{
+  margin: 0 0 0 0;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.log{
+  display: flex;
+}
+
+.imagee{
+  height:507px;
+  width:400px;
+}
+
+.menubar {
+  display: flex;
+  flex-direction: column;
+  background-color: #D9D9D9;
+  width: 30%;
+  height: 575px;
+  align-items: center;
+  margin-top: 0; /* or margin-top: 0px; */
+  padding-top: 30px;
+}
+
+.menuItems {
+  display: flex; /* Added */
+  background-color: white;
+  border-radius: 20px;
+  width: 85%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.dash{
+  display: flex;
+}
+
+.boxx{
+  background-color: grey;
+  height: 150px;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.dash2{
+  display: flex;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
