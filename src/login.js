@@ -50,7 +50,9 @@ function Login() {
       const user = users.find(user => user.aadharNumber === formData.aadharNumber);
       if (user && user.password === formData.password) {
         console.log('Login successful');
-        localStorage.setItem('user', JSON.stringify(user));
+        // Inside handleSubmit function, after successful login
+localStorage.setItem('user', JSON.stringify(user));
+navigate('/dashboard', { state: { user } }); // Pass user data as state
         navigate('/dashboard');
       } else {
         console.error('Invalid Aadhar number or password');
@@ -93,13 +95,12 @@ function Login() {
                 <button type="submit" className="login-btn">Log In</button>
               </form>
               <br></br>
-              <hr></hr>
               <Link className="signup-message" to="/signup"><u>Do not have an account? Sign Up</u></Link>
             </section>
           </main>
         </div>
         <div className='image'>
-          <img src={coinimg} className='coin'/>
+          <img src={coinimg} className='coin' style={{height:'604px'}}/>
         </div>
       </div>
     </div>

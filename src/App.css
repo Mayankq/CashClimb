@@ -118,7 +118,7 @@
   border-radius: 0px;
   padding-left: 20px;
   padding-right: 40px;
-  padding-top:296px;
+  padding-top:60px;
   padding-bottom :30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -202,13 +202,18 @@
 }
 
 .boxx{
-  background-color: grey;
+  background-color: black;
+  text-align: center;
   height: 150px;
   width: 300px;
   margin-top: 20px;
   margin-left: 40px;
-  border-radius: 60px;
-  padding: 10px 10px 10px 10px;
+  border-radius: 30px;
+  padding-top:20px;
+  font-family: "Gudea",sans-serif;
+  color: white;
+  font-weight: bold;
+  
 }
 
 .dash2{
@@ -244,6 +249,20 @@ hr {
   display:flex;
   font-family: 'Gudea', sans-serif;
 }
+.row2{
+display: flex;
+}
+.col11{
+  width: 60%;
+  height: 100%;
+  padding-right: 20px;
+}
+.loan{
+  text-align: center;
+  font-family: "gudea" sans-serif;
+  font-size: larger;
+}
+
 
 .align1{
   display: flex;
@@ -289,4 +308,13 @@ hr {
 .align4{
   text-align: center;
   font-family: 'Gudea', sans-serif;
+}
+
+.image2{
+  height: 100%;
+  width: 40%;
+}
+.image2 img{
+  height: 60%;
+  width: 100%;
 }

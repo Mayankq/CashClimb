@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import side from './assets/side.jpg'
+import Navbar from './Navbar';
+import Menu from './menu';
 function MyForm() {
   return (
+    <>
     <form>
-      <div className='row'>
-        <div className='col1'>   </div>
-        <div className='col2'>   
-      
-        
-        <div className='h1'>
+      <div className='row2'>
+        <div className='col11'>   
+        <div className='loan'>
         <h1>Loan Application </h1>
         <br></br>
         <br></br>
         <br></br>
         </div>
-        
         <div className='align1'>
         <input type="text" class='curved-radius' placeholder="Customer Name" />
         <br></br>
@@ -52,14 +51,15 @@ function MyForm() {
 
         <br></br>
         <div className='align4'>
-        <input type='submit' class='sub' value="SUBMIT"/>
+        <input type='submit' class='login-btn' value="SUBMIT"/>
         </div>
         </div>
-        <div className='col3'>
-          <img src={side} alt="bg" style={{height:'650px',width:'270px'}} className='coin'/>
+        <div className='image2'>
+          <img src={side} alt="bg" className='coin'/>
         </div>
         </div>
     </form>
+    </>
   )
 }
 

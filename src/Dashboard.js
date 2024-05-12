@@ -35,7 +35,7 @@ const options = {
   },
 };
 
-function Dashboard({user}){
+function Dashboard({ location }) {
     return(
         <div>
             <div className='dash'>
@@ -46,13 +46,13 @@ function Dashboard({user}){
                     <Bar data={data} options={options} />
                 </div>    
                 <div className='box'>
-                    <div className='boxx'>Money Invested</div>
-                    <div className='boxx'>Loan Taken</div>
+                    <div className='boxx'>Money Invested<p style={{fontSize:'4em', marginTop:'15px'}}>₹20,000</p></div>
+                    <div className='boxx'>Loan Taken<p style={{fontSize:'4em', marginTop:'15px'}}>₹5,00,000</p></div>
                 </div>
                 </div>
                 <div className='dash'>
-                <div className='boxx' style={{width:'460px', height: '150px'}}>Category change amount</div>
-                <div className='boxx' style={{width:'500px'}}>Top Investors</div>
+                <div className='boxx' style={{width:'460px', height: '150px' ,marginTop:'-20px'}}>Category change amount<p style={{fontSize:'4em', marginTop:'15px'}}>₹1,00,000</p></div>
+                <div className='boxx' style={{width:'500px', marginTop:'-20px'}}>Top Investors<p style={{fontSize:'1.4em', marginTop:'15px'}}>1. Aastha Tripathi<br></br>2. Krish Jain<br></br>3. Pragati Shekhar</p></div>
                 </div>
                 </div>
             </div>

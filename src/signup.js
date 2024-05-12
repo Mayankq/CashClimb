@@ -70,13 +70,12 @@ function Signup({ onSignup }) {
                 <button type="submit" className="login-btn">Sign Up</button>
               </form>
               <br></br>
-              <hr></hr>
               <Link to="/login" className="signup-message"><u>Already have an account? Log In</u></Link>
             </section>
           </main>
         </div>
         <div className='image'>
-          <img src={coinimg} className='coin'/>
+          <img src={coinimg} className='coin' style={{height:'604px'}}/>
         </div>
       </div>
     </div>
